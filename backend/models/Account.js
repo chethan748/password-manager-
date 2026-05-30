@@ -11,5 +11,6 @@ const accountSchema = new mongoose.Schema({
     password: { type: String, required: true }
 }, { timestamps: true });
 
+
 // Create the model once and export it directly
 module.exports = mongoose.model('Account', accountSchema);
