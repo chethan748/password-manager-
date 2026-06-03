@@ -14,14 +14,15 @@ const login = require("./routes/login");
 const accountRoutes = require("./routes/accountroutes");
 const signup = require("./routes/signup");
 const middleware=require("./middleware/auth")
+const forgotpassword=require('./routes/forgotpass')
 
 require("dotenv").config();
 app.use(cors());
 app.use(express.json()); 
-
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(dbURI)
-  .then(() => console.log(" Connected to MongoDB"))
+  .then(() => console.log(" Connected to MongoDB database"))
   .catch(err => console.error(" Could not connect", err));
 app.use('/post', postRoutes);     
 app.use('/update', updateRoutes);    
@@ -30,7 +31,7 @@ app.use('/delete', deleteRoutes);
 app.use("/api/login", login);
 
 app.use('/accounts', getRoutes); 
-
+app.use("/api/auth",forgotpassword)
 
 app.use("/api/accounts", accountRoutes);
 
@@ -45,5 +46,5 @@ app.get("/verify",middleware, async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Server running: http://localhost:${port}`);
+  console.log(` Server running: http://localhost:${port}`);
 });

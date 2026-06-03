@@ -5,7 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 const api = "http://localhost:5000";
 
-const Login = ({ onAuthSuccess, switchToSignup }) => {
+// 1. Added switchToForgot to the destructured props
+const Login = ({ onAuthSuccess, switchToSignup, switchToForgot }) => {
     const [form, setForm] = useState({ email: "", password: "" });
     const [loading, setloading] = useState(false);
 
@@ -64,7 +65,19 @@ const Login = ({ onAuthSuccess, switchToSignup }) => {
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">Master Password</label>
+                        
+                        <div className="flex justify-between items-center">
+                            <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">Master Password</label>
+                            
+                           
+                            <button
+                                type="button"
+                                onClick={switchToForgot}
+                                className="text-xs text-green-400 hover:underline font-medium focus:outline-none"
+                            >
+                                Forgot?
+                            </button>
+                        </div>
                         <input
                             type="password"
                             name="password"

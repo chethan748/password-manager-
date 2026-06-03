@@ -17,6 +17,8 @@ const Manager = () => {
     username:"",
     password:""
   })
+ 
+  
    const handlechange = async (e) => {
 
      setform({...form,[e.target.name]:e.target.value})
