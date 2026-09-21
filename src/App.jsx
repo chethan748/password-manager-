@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Manager from './components/Manager';
 import Footer from './components/Footer';
-import Signup from './components/signup';
+import Signup from './components/Signup';
 import Login from './components/Login'; 
 import ForgotPassword from './components/Forgotpassword'; // IMPORT THESE
 import ResetPassword from './components/Reset';   // NEW COMPONENTS
