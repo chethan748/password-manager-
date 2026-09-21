@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import Signup from './components/Navbar';
+import Signup from './Signup';
 
 
 const Navbar = () => {
