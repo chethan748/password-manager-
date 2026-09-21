@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@Layer components{
+    .mycontainer{
+        @apply container  mx-auto;
+    }
+}
+
+.header-mask {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
