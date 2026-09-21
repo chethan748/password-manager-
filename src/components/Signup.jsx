@@ -30,7 +30,7 @@ const Signup = ({ onAuthSuccess, switchToLogin }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/signup/signup', formData, {
+            const response = await axios.post('https://password-manager-eilg.onrender.com/api/signup/signup', formData, {
                 headers: { "Content-Type": "application/json" },
                 timeout: 10000 
             });
