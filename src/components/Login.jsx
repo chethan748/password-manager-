@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const api = "http://localhost:5000";
+const api = "https://password-manager-eilg.onrender.com";
 
 // 1. Added switchToForgot to the destructured props
 const Login = ({ onAuthSuccess, switchToSignup, switchToForgot }) => {

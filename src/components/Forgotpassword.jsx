@@ -6,6 +6,7 @@ export default function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,7 +15,7 @@ export default function ForgotPassword() {
 
     try {
     
-      const res = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const res = await axios.post('https://password-manager-eilg.onrender.com/api/auth/forgot-password', { email });
       setMessage(res.data.message);
     } catch (err) {
       // Catches errors like "This is not a registered user."

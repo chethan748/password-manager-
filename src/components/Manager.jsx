@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import zxcvbn from "zxcvbn";
 
-let api = "http://localhost:5000";
+let api = "https://password-manager-eilg.onrender.com";
 
 const Manager = () => {
   const [count, setCount] = useState(0);
